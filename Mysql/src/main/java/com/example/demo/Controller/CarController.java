@@ -28,6 +28,7 @@ public class CarController {
 	{
 		return cser.getInfo();
 	}
+	
 	@PutMapping("/updateCar")
 	public CarModel updateDetails(@RequestBody CarModel cb)
 	{
@@ -39,5 +40,21 @@ public class CarController {
 		cser.deleteInfo(cid);
 		return "Carid"+cid+"deleted";
 	}
+	@GetMapping("/sortDes/{cname}")
+	public List<CarModel> sortCar(@PathVariable("cname") String cname)
+	{
+		
+		return cser.sortDesc(cname);
+	}
+	@GetMapping("/pagination/{cnu}/{csize}")
+	public List<CarModel> paginationData(@PathVariable("cnu") int cnu,@PathVariable("csize") int csize)
+	{
+		return cser.paginationData(cnu,csize);
+	}
+	@GetMapping("/pageAndsort/{cnu}/{csize}/{cname}")
+	public List<CarModel> paginationSorting(@PathVariable("cnu") int cnu,@PathVariable("csize") int csize,@PathVariable("cname") String cname)
+	{
+		return cser.paginationAndSorting(cnu, csize, cname);
+	}
 	
-}
+	}
