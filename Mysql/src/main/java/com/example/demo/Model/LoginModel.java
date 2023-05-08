@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class LoginModel {
+	 
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

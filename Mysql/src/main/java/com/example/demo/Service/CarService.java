@@ -7,11 +7,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
+
 
 import com.example.demo.Model.CarModel;
 import com.example.demo.Repository.CarRepo;
-
 
 
 @Service
@@ -55,4 +54,5 @@ public class CarService {
 		Page<CarModel>p=carrepo.findAll(PageRequest.of(cnu,csize,Sort.by(cname).descending()));
 		return p.getContent();
 	}
-	}
+   
+}

@@ -29,6 +29,7 @@ public class CarController {
 		return cser.getInfo();
 	}
 	
+	
 	@PutMapping("/updateCar")
 	public CarModel updateDetails(@RequestBody CarModel cb)
 	{
@@ -57,4 +58,5 @@ public class CarController {
 		return cser.paginationAndSorting(cnu, csize, cname);
 	}
 	
-	}
+	
+}

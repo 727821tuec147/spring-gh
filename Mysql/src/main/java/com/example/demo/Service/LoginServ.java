@@ -35,9 +35,5 @@ public class LoginServ {
 		}
 		return result;
 	}
-	//public LoginModel saveUser(LoginModel lk) {
-		// TODO Auto-generated method stub
-		//return null;
-//	}
-
+	
 }

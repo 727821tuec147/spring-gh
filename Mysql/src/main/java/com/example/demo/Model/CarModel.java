@@ -4,14 +4,17 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
-@Table(name="model")
+@Table(name="carmodel")
+
 public class CarModel {
 	@Id
 	@Column(name="cid")
 	private int cid;
 	private String cname;
+	@Transient
 	private int cmodel;
 	
 	public int getCid() {
